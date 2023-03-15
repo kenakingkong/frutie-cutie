@@ -1,17 +1,15 @@
-# README
+# frutie-cutie
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
+## Setup
 * Ruby version
+ruby 3.1.3
 
-* System dependencies
-
-* Configuration
+* Rails Version
+rails 7.0.4.3
 
 * Database creation
+sqlite3
+
 
 * Database initialization
 
@@ -20,5 +18,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
