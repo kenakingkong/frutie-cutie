@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+cutie_one:
+  name: Janie
+  user_id: <%= ActiveRecord::FixtureSet.identify('user_two') %>
+  character: 0
+  level: 0
+
+cutie_two:
+  name: Johnie
+  user_id: <%= ActiveRecord::FixtureSet.identify('user_two') %>
+  character: 1
+  level: 1
