@@ -1,0 +1,23 @@
+<turbo-frame id="nav-bar-menu">
+  <div data-controller="menu" class="menu-content animate-slide-in-left">
+
+    <%# how do i return to last path - not root? %>
+    <a href=<%= root_path%> data-turbo-track="reload">
+      close
+    </a>
+    
+    <nav>
+      <ul>
+        <li>
+          <%= link_to "my cutie", cutie_path(Cutie.where(user_id: current_user.id).first) %>
+        </li>
+        <li>
+          <%= link_to "my info", user_path(current_user) %>
+        </li>
+        <li>
+          <%= link_to "logout", logout_path, method: :post %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</turbo-frame>

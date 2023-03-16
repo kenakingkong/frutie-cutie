@@ -8,6 +8,8 @@ class FeedingsController < ApplicationController
     else
       @fruits = fruits.first(10)
     end
+
+    render partial: "feedings/search_fruit"
   end
 
   def create

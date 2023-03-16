@@ -2,31 +2,7 @@
 
   <%= link_to "logo", root_path %>
 
-  <% if current_user.present? %>
-    <div data-controller="menu">
-      <button data-action="menu#show" data-menu-target="showButton" class="menu-show-button">
-        menu
-      </button>
-
-      <aside data-menu-target="content" class="hidden menu-content">
-        <button data-action="menu#hide" class="menu-hide-button">
-          close
-        </button>
-        <nav>
-          <ul>
-            <li>
-              <%= link_to "my cutie", cutie_path(Cutie.where(user_id: current_user.id).first) %>
-            </li>
-            <li>
-              <%= link_to "my info", user_path(current_user) %>
-            </li>
-            <li>
-              <%= link_to "logout", logout_path, method: :post %>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-    </div>
-  <% end %>
-  
+  <turbo-frame id="nav-bar-menu">
+    <a href=<%= menu_path%>>menu</a>
+  </turbo-frame>
 </nav>

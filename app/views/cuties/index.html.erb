@@ -4,6 +4,8 @@
   </div>
 </div>
 
-<%= link_to feedings_path do %>
-  <button class="bottom-button">feed me</button>
-<% end %>
+<turbo-frame id="search-fruit">
+  <%= link_to feedings_path do %>
+    <button class="bottom-button">feed me</button>
+  <% end %>
+</turbo-frame>

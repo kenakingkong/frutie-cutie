@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   post "/logout", to: "sessions#destroy"
 
+  get "/menu", to: "web#menu"
+
   resources :users
 
   resources :cuties

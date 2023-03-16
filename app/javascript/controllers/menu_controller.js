@@ -1,20 +1,24 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["content", "showButton"];
-  show() {
-    this.showButtonTarget.classList.add("hidden");
-
-    this.contentTarget.classList.remove("hidden");
-    // this.contentTarget.classList.remove("animate__slideOutRight");
-    // this.contentTarget.classList.add("animate__slideInRight");
+  connect() {
+    console.log("connected to menu controller");
   }
 
-  hide() {
-    this.showButtonTarget.classList.remove("hidden");
+  // static targets = ["content", "showButton"];
+  // show() {
+  //   this.showButtonTarget.classList.add("hidden");
 
-    this.contentTarget.classList.add("hidden");
-    // this.contentTarget.classList.add("animate__slideInRight");
-    // this.contentTarget.classList.add("animate__slideOutRight");
-  }
+  //   this.contentTarget.classList.remove("hidden");
+  //   // this.contentTarget.classList.remove("animate__slideOutRight");
+  //   // this.contentTarget.classList.add("animate__slideInRight");
+  // }
+
+  // hide() {
+  //   this.showButtonTarget.classList.remove("hidden");
+
+  //   this.contentTarget.classList.add("hidden");
+  //   // this.contentTarget.classList.add("animate__slideInRight");
+  //   // this.contentTarget.classList.add("animate__slideOutRight");
+  // }
 }
