@@ -1,14 +1,14 @@
 <div class="container">
-    <div class="content">
-        <p>your info</p>
-        <div><%= @user.name %></div>
-        <div><%= @user.phone %></div>
-        <div><%= @user.birthday.strftime("%m/%d/%y") %></div>
+  <div class="content">
+    <p>your info</p>
+    <div><%= @user.name %></div>
+    <div><%= @user.phone %></div>
+    <div><%= @user.birthday.strftime("%m/%d/%y") %></div>
 
-        <%= render "shared/copy_to_clipboard", text: @user.name %>
-    </div>
+    <%= render "shared/copy_to_clipboard", text: @user.name %>
+  </div>
 </div>
 
 <%= link_to edit_user_path(@user) do %>
-    <button class="bottom-button">edit</button>
+  <button class="bottom-button">edit</button>
 <% end %>

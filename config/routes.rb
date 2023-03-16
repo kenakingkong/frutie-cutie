@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   post "/logout", to: "sessions#destroy"
 
   resources :users
-  
-  resources :cuties do
-    resources :feedings
-  end
+
+  resources :cuties
+
+  resources :feedings
 
 end

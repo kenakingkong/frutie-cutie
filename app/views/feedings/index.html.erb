@@ -1,2 +1,23 @@
-<h1>Feeding#index</h1>
-<p>Find me in app/views/feeding/index.html.erb</p>
+<div class="container">
+  <div data-controller="search-fruits" class="content">
+
+    <%= form_with url: feedings_path, method: "get", data: { "search-fruits-target": "form", "turbo-frame": "search-fruits-results" } do |form| %>
+      <%= form.search_field :query, data: { action: "input->search-fruits#search" }, placeholder: "e.g. stawberry" %>
+    <% end %>
+
+    <turbo-frame id="search-fruits-results">
+      <% if @fruits.length === 0 %>
+        <span>we couldn't find any fruits :(</span>
+      <% else %>
+        <% @fruits.each do |fruit| %>
+          <button data-item-value-param=<%= fruit["label"] %>>
+            <%= fruit["label"] %>
+          </button>
+        <% end %>
+      <% end %>
+    </turbo-frame>
+
+    <turbo-frame id="search-fruit-result-form"></turbo-frame>
+
+  </div>
+</div>

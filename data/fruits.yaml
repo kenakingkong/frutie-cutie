@@ -1,12 +1,24 @@
 - label: apple
-  image: 
+  image:
+- label: apricot
+  image:
+- label: avocado
+  image:
+- label: blackberry
+  image:
 - label: blueberry
-  image: 
+  image:
+- label: honeydew
+  image:
+- label: mango
+  image:
 - label: orange
-  image: 
+  image:
+- label: papaya
+  image:
 - label: strawberry
-  image: 
+  image:
 - label: tangerine
-  image: 
+  image:
 - label: watermelon
   image:

@@ -5,65 +5,63 @@
 */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 1rem;
+  margin: 0;
+  padding: 1rem;
 
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 fieldset {
-    width: 100%;
-    padding: 0;
+  width: 100%;
+  padding: 0;
 
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 
-    border: none;
+  border: none;
 }
 
 input {
-    padding: 1rem;
-    border: none;
-    border-radius: 0.25rem;
-    background: whitesmoke;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background: whitesmoke;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
-
-
-
 
 /*
  *
@@ -72,12 +70,12 @@ input {
 */
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .bottom-button {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    background: lavenderblush;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background: lavenderblush;
 }
