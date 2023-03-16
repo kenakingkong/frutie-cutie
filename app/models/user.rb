@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   before_validation :normalize_phone, on: :create
 
-  has_many :cuties
+  # has_many :cuties
 
   scope :active, -> { where(deleted_at: nil) }
 

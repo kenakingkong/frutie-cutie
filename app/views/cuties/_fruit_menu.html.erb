@@ -1,0 +1,16 @@
+<div data-controller="fruit-menu" class="fruit-menu">
+  <button data-fruit-menu-target="fruitMenuShowButton" data-action="fruit-menu#show" class="bottom-button">
+    Feed Me
+  </button>
+
+  <div data-fruit-menu-target="fruitMenuContent" class="fruit-menu-content hidden">
+    <%= form_with do |form| %>
+      <%= form.search_field :fruit, placeholder: "e.g. stawberry"%>
+    <% end %>
+    <% fruits.each do |fruit| %>
+      <button>
+        <%= fruit["label"] %>
+      </button>
+    <% end %>
+  </div>
+</div>

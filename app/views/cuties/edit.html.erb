@@ -1,0 +1,39 @@
+<%= form_with model: @cutie, class: "container" do |form| %>
+  <%= render "shared/back_button", path: cutie_path(@cutie) %>
+
+  <div class="content">
+    <fieldset>
+      <%= form.label :name, "cutie's name" %>
+      <%= form.text_field :name, placeholder: "e.g. makenie" %>
+    </fieldset>
+
+    <fieldset>
+      <div>
+        <%= form.radio_button :character, 1 %>
+        <%= form.label :character_1, "Character One" %>
+      </div>
+      <div>
+        <%= form.radio_button :character, 2 %>
+        <%= form.label :character_2, "Character Two" %>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div>
+        <%= form.radio_button :level, 0 %>
+        <%= form.label :level_0, "Level Zero" %>
+      </div>
+      <div>
+        <%= form.radio_button :level, 1 %>
+        <%= form.label :level_1, "Level One" %>
+      </div>
+      <div>
+        <%= form.radio_button :level, 2 %>
+        <%= form.label :level_2, "Level Two" %>
+      </div>
+    </fieldset>
+  </div>
+
+  <%= form.submit "save", class:"bottom-button" %>
+
+<% end %>

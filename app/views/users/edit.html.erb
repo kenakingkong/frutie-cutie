@@ -1,0 +1,18 @@
+<%= form_with model: @user, class: "container" do |form| %>
+  <%= render "shared/back_button", path: user_path(@user) %>
+
+  <div class="content">
+    <fieldset>
+      <%= form.label :name, "your name" %>
+      <%= form.text_field :name, placeholder: "e.g. makena" %>
+    </fieldset>
+
+    <fieldset>
+      <%= form.label :birthday, "your birthday" %>
+      <%= form.date_field :birthday, placeholder: "mm/dd/yyyy" %>
+    <fieldset>
+  </div>
+
+  <%= form.submit "save", class:"bottom-button" %>
+
+<% end %>

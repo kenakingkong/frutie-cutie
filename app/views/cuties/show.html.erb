@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="content">
+
+    <div>
+      <p><%= @cutie.name %></p>
+      <p>age: <%= @cutie.created_at %></p>
+      <p>character: <%= @cutie.character %></p>
+      <p>level: <%= @cutie.level %></p>
+    </div>
+
+  </div>
+
+  <%# feedings%>
+</div>
+
+<%= link_to edit_cutie_path(@cutie) do %>
+  <button class="bottom-button">edit</button>
+<% end %>

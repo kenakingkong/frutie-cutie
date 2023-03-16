@@ -1,0 +1,28 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+
+    &-show-button {
+
+    }
+
+    &-content {
+        position: fixed; 
+        top: 0;
+        right: 0;
+        z-index: 1;
+    
+        width: 100vw;
+        height: 100vh;
+        padding: 1rem;
+    
+        background-color: aquamarine;
+    }
+
+    &-hide-button {
+        
+    }
+}

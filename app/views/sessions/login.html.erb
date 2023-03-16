@@ -1,0 +1,18 @@
+
+<%= form_with url: login_path, class: "content", data: { turbo: false } do |form| %>
+  <div class="content">
+
+    <fieldset>
+      <%= form.label :phone, "your phone" %>
+      <%= form.phone_field :phone, placeholder: "(xxx) xxx - xxxx" %>
+    </fieldset>
+
+    <fieldset>
+      <%#= form.label :verification_code, "verification code" %>
+      <%#= form.text_field :verification_code, placeholder: "xxxxxx" %>
+    </fieldset>
+
+  </div>
+
+  <%= form.submit "let's go", class:"bottom-button" %>
+<% end %>

@@ -5,8 +5,8 @@ class Cutie < ApplicationRecord
   validates :character, presence: true
   validates :level, presence: true
 
-  belongs_to :users
-  has_many :feedings
+  # belongs_to :users
+  # has_many :feedings
 
   scope :active, -> { where(deleted_at: nil) }
 
