@@ -3,9 +3,7 @@
     little character goes here!
   </div>
 </div>
-
-<turbo-frame id="search-fruit">
-  <%= link_to feedings_path do %>
-    <button class="bottom-button">feed me</button>
-  <% end %>
-</turbo-frame>
+<%= link_to feedings_path, data: {"turbo-frame": "fruit-menu"} do %>
+  <button class="bottom-button">feed me</button>
+<% end %>
+<turbo-frame id="fruit-menu"></turbo-frame>

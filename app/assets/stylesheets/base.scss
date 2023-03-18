@@ -61,14 +61,14 @@ input {
 
 .hidden {
   display: none;
-}
 
-.animate-slide-in-left {
-  animation: slideInLeft 500ms ease-in;
-}
+  &-right {
+    transform: translateX(100%);
+  }
 
-.animate-slide-in-up {
-  animation: slideInUp 500ms ease-in;
+  &-bottom {
+    transform: translateY(100%);
+  }
 }
 
 /*
@@ -86,4 +86,5 @@ button {
   padding: 1rem;
   border-radius: 0.25rem;
   background: lavenderblush;
+  animation: fadeIn;
 }

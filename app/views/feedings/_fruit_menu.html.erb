@@ -1,0 +1,25 @@
+<turbo-frame id="fruit-menu">
+  <div 
+    class="content fruit-menu-content animate__animated animate__slideInUp"
+    data-controller="fruit-menu"
+    data-fruit-menu-target="menuContent"
+  ​>
+    <a href="/" data-action="fruit-menu#close"> x </a>
+    <%# <button data-action="fruit-menu#close" action=”remove”>x</button> %>
+    <%= form_with url: feedings_path, method: "get", data: { "fruit-menu-target": "form", "turbo-frame": "fruit-menu-results" } do |form| %>
+      <%= form.search_field :query, data: { action: "input->fruit-menu#search" }, placeholder: "e.g. stawberry" %>
+    <% end %>
+    <turbo-frame id="fruit-menu-results">
+      <% if @fruits.length === 0 %>
+        <span>we couldn't find any fruits :(</span>
+      <% else %>
+        <% @fruits.each do |fruit| %>
+          <button data-item-value-param=<%= fruit["label"] %>>
+          <%= fruit["label"] %>
+        </button>
+          <% end %>
+        <% end %>
+      </turbo-frame>
+      <turbo-frame id="search-fruit-result-form"></turbo-frame>
+    </div>
+  </turbo-frame>

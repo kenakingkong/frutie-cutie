@@ -1,0 +1,14 @@
+.fruit-menu-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100vw;
+  height: max-content;
+  max-height: 100vh;
+  padding: 1rem;
+
+  background-color: white;
+  border-top: 1px solid black;
+}

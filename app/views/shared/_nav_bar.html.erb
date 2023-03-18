@@ -1,8 +1,33 @@
 <nav class="nav-bar">
-
   <%= link_to "logo", root_path %>
-
-  <turbo-frame id="nav-bar-menu">
-    <a href=<%= menu_path%>>menu</a>
-  </turbo-frame>
+  <div 
+    data-controller="animate" 
+    data-animate-in-class="animate__slideInRight"
+    data-animate-out-class="animate__slideOutRight"
+  >
+    <button data-action="animate#in">
+      menu
+    </button>
+    <div
+      class="animate__animated nav-menu-content hidden-right"
+      data-animate-target="source"
+    >
+      <button data-action="animate#out">
+        close
+      </button>
+      <nav>
+        <ul>
+          <li>
+            <%= link_to "my cutie", cutie_path(Cutie.where(user_id: current_user.id).first) %>
+          </li>
+          <li>
+            <%= link_to "my info", user_path(current_user) %>
+          </li>
+          <li>
+            <%= link_to "logout", logout_path, method: :post %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </nav>

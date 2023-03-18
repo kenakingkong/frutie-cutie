@@ -1,25 +1,30 @@
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.menu {
-  &-show-button {
+.nav {
+  &-bar {
+    display: flex;
+    justify-content: space-between;
   }
 
-  &-content {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
-
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-
-    background-color: aquamarine;
+  &-logo {
   }
 
-  &-hide-button {
+  &-menu {
+    &-content {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 2;
+
+      width: 100vw;
+      height: 100vh;
+      padding: 1rem;
+
+      background-color: aquamarine;
+    }
+
+    &-show-button {
+    }
+
+    &-hide-button {
+    }
   }
 }

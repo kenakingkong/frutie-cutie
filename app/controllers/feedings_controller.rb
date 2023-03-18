@@ -9,7 +9,7 @@ class FeedingsController < ApplicationController
       @fruits = fruits.first(10)
     end
 
-    render partial: "feedings/search_fruit"
+    render partial: "feedings/fruit_menu"
   end
 
   def create
